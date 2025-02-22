@@ -46,7 +46,7 @@ class Inventory:
         product = self.get_product(name)
         self._products.remove(product)
 
-    def get_all_inventory(self) -> float:
+    def total_inventory_value(self) -> float:
         """
         Go over all products and return the total value of the inventory.
         :return: Return the total value of the inventory. If there is no product in the list, return 0.

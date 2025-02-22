@@ -11,7 +11,7 @@ from inventory.objects.product import Product
 def test_inventory_price(simple_inventory, products, expected_value):
     inventory = simple_inventory
     for product in products: inventory.add_product(product)
-    value = inventory.get_all_inventory()
+    value = inventory.total_inventory_value()
     assert value == expected_value, \
         f'Inventory total value is not as expected. Expected value: {expected_value}, but the actual value is {value}'
 
@@ -30,7 +30,7 @@ def test_delete_product(simple_inventory, products, expected_price_after_delete)
     assert inventory.get_product(tested_product) is None, \
         f"The product with name {tested_product} shouldn't be found, but it is exist on products list"
 
-    inventory_total_value = inventory.get_all_inventory()
+    inventory_total_value = inventory.total_inventory_value()
     assert inventory_total_value == expected_price_after_delete, \
         (f"Price after deletion {tested_product} is not as expected. Expected {expected_price_after_delete} "
          f"but found {inventory_total_value}")
