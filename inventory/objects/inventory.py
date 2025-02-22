@@ -1,4 +1,4 @@
-from objects.product import Product
+from inventory.objects.product import Product
 
 class Inventory:
 
@@ -16,6 +16,7 @@ class Inventory:
             self._name = value
         else:
             raise ValueError("Name must be a string value.")
+
 
     def add_product(self, product: Product):
         """

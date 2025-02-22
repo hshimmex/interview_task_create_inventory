@@ -1,5 +1,5 @@
 import pytest
-from objects.product import Product
+from inventory.objects.product import Product
 
 
 @pytest.mark.parametrize("products, expected_value",

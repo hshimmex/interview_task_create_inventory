@@ -1,5 +1,5 @@
 import pytest
-from objects.inventory import Inventory
+from inventory.objects.inventory import Inventory
 
 
 @pytest.fixture
