@@ -8,7 +8,7 @@ from inventory.objects.product import Product
                           ([Product("Phone", 502, 25),
                             Product("Mouse", 25, 1)], 12575),
                           ([], 0)])
-def test_inventory_price(simple_inventory, products, expected_value):
+def test_inventory_total_value(simple_inventory, products, expected_value):
     inventory = simple_inventory
     for product in products: inventory.add_product(product)
     value = inventory.total_inventory_value()
