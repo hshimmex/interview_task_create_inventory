@@ -20,7 +20,7 @@ def test_inventory_price(simple_inventory, products, expected_value):
                          [([Product("Mouse", 10.55, 1),
                             Product("Laptop", 10000.5, 10),
                             Product("Mouse", 0, 0)], 100005),
-                          ([Product("Mouse", 10.55, -1)],0)])
+                          ( [Product("Mouse")],0)])
 def test_delete_product(simple_inventory, products, expected_price_after_delete):
     inventory = simple_inventory
     tested_product = products[0].name

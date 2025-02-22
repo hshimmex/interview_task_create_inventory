@@ -1,11 +1,13 @@
 import uuid
 
+from robot.utils import is_number
+
 
 class Product:
     def __init__(self, name: str, price: float = 0.0, count: int = 0):
-        self._name = name
-        self._count = count
-        self._price = price
+        self.name = name
+        self.count = count
+        self.price = price
 
     @property
     def count(self):
@@ -24,7 +26,7 @@ class Product:
 
     @price.setter
     def price(self, value):
-        if isinstance(value, int) and value >= 0:
+        if is_number(value) and value >= 0:
             self._price = value
         else:
             raise ValueError("Price must be a non-negative integer.")
