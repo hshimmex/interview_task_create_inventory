@@ -1,1 +1,1 @@
-Basic project for mange inventory
+Basic project for mange inventory.
